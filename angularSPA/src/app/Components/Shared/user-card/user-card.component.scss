@@ -1,0 +1,20 @@
+@import "../../../../styles.scss";
+
+.card {
+    @include commonText;
+    border-radius: $border-radius;
+    background-color: $ecru;
+    border: 1px solid rgba($dark, 18%);
+    background-color: lighten($color: rgba($ecru, 80%), $amount: 3%);
+    padding: 1rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.66rem;
+    color: $dark;
+    padding: .25rem 0 .25rem 0;
+}
