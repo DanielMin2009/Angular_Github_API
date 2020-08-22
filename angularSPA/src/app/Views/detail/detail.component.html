@@ -1,1 +1,33 @@
-<p>detail works!</p>
+<h1 class="animated fadeIn fast mTop">{{ user.login | uppercase }}</h1>
+<hr>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a [routerLink]="['/']">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">User {{ user.id }} data list</li>
+    </ol>
+</nav>
+<main class="animated fadeIn fast no-gutters">
+    <div class="row">
+        <figure class="col col-lg-4">
+            <img [src]="user.avatar_url" [alt]="user.login" class="img-thumb" width="100%">
+        </figure>
+        <article class="col col-lg-8">
+            <ul class="list-group list-group-flush card">
+                <li class="list-group-item">Url: {{ user.url }}</li>
+                <li class="list-group-item">Html url: {{ user.html_url }}</li>
+                <li class="list-group-item">Followers url: {{ user.followers_url }}</li>
+                <li class="list-group-item">Followers_url: {{ user.followers_url }}</li>
+                <li class="list-group-item">Following_url: {{ user.following_url }}</li>
+                <li class="list-group-item">Gists_url: {{ user.gists_url }}</li>
+                <li class="list-group-item">Starred_url: {{ user.starred_url }}</li>
+                <li class="list-group-item">Subscriptions_url: {{ user.subscriptions_url }}</li>
+                <li class="list-group-item">Organizations_url: {{ user.organizations_url }}</li>
+                <li class="list-group-item">Repos_url: {{ user.repos_url }}</li>
+                <li class="list-group-item">Events_url: {{ user.events_url }}</li>
+                <li class="list-group-item">Received_events_url: {{ user.received_events_url }}</li>
+                <li class="list-group-item">Type: {{ user.type }}</li>
+                <li class="list-group-item">Site_admin: {{ user.site_admin }}</li>
+            </ul>
+        </article>
+    </div>
+</main>

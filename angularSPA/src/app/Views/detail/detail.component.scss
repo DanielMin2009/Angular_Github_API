@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+
+.card {
+    @include commonText;
+    border-radius: $border-radius-sm;
+    background-color: $ecru;
+    border: 1px solid rgba($ecru, 18%);
+    background-color: rgba($color: $ecru, $alpha: 0.2);
+    padding: 1rem;
+
+    &.list-group-item {
+        border: 1px solid rgba($color: $ecru, $alpha: 0.2);
+    }
+
+    @media (max-width: 992px) {
+        width: 100%;
+    }
+    @media (min-width: 992px) {
+        width: 100%;
+    }
+    .list-group-item {
+        background-color: transparent;
+    }
+}
+.breadcrumb {
+    padding: 0.75rem 0rem;
+    a {
+        color: $turquoise;
+    }
+}
+img {
+    border-radius: $border-radius-sm;
+}

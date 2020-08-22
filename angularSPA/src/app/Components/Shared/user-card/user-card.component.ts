@@ -12,7 +12,6 @@ export class UserCardComponent implements OnInit {
   @Input() user: User;
   @Output() selectedUser: EventEmitter<number>;
 
-
   constructor(private router: Router) {
     this.selectedUser = new EventEmitter();
   }
@@ -21,8 +20,8 @@ export class UserCardComponent implements OnInit {
     console.log(this.user, 'card');
   }
 
-  viewUser(userId) {
-    // This component is inside a parent component and it has to emit the click event, passing him the selectedGnome id to the father component. It makes possible to navigate to it's url with gnomeId as a parameter (Output)
+  viewDetail(userId) {
+    // This component is inside a parent component and it has to emit the click event, passing him the selectedUser id to the father component. It makes possible to navigate to it's url with userId as a parameter (Output)
     this.selectedUser.emit(userId);
   }
 

@@ -38,6 +38,10 @@ export class HomeComponent implements OnInit {
     );
   }
 
+  viewDetail(id: number) {
+    this.router.navigate(['/user', id]);
+  }
+
   // showItems(event) {
   //   this.itemsPerPage = event.target.value;
   // }

@@ -1,11 +1,11 @@
 <ng-container>
-    <div class="card animated fadeIn fast">
-        <div class="card-body">
-            <!-- <figure>
-                <img [src]="user.thumbnail" [alt]="user.name" class="img-thumb" width="100%">
+    <div class="card animated fadeIn fast no-gutters">
+        <div class="card-body no-gutters">
+            <figure>
+                <img [src]="user.avatar_url" [alt]="user.login" class="img-thumb" width="100%">
             </figure>
-            <h4 class="card-title">{{user.name}}</h4>
-            <button type="button" class="btn" (click)="viewUser(user.id)">view details</button> -->
+            <h4 class="card-title">{{user.login}}</h4>
+            <button type="button" class="btn" (click)="viewDetail(user.id)">View details</button>
         </div>
     </div>
 </ng-container>
