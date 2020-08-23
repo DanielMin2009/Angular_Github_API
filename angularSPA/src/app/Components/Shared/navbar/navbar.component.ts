@@ -9,13 +9,11 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   constructor(private router: Router) { }
-
   ngOnInit(): void {
   }
 
   searchUsers( term: string ) {
-    // console.log(term);
+    console.log(term);
     this.router.navigate(['/search',term]);
   }
-
 }

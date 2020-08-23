@@ -40,9 +40,6 @@ p {
 }
 
 .container {
-    @media (min-width: 576px) {
-        max-width: 90%;
-    }
     @media (min-width: 1500px) {
         width: 87%;
     }

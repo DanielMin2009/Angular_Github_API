@@ -1,9 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { UsersService } from 'src/app/Services/users.service';
 import { User } from 'src/app/Interfaces/user.interface';
-import { Router } from '@angular/router';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +7,9 @@ import { from } from 'rxjs';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  searchUser(value: string) {
+    console.log(value);
+  }
 
   public users: User[] = [];
   public user: User;
@@ -19,30 +18,9 @@ export class HomeComponent implements OnInit {
   // public page: number = 1;
   // public itemsPerPage: number = 10;
 
-  constructor(
-    private httpClient: HttpClient,
-    private _usersService: UsersService,
-    private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.getUsers();
   }
-  public async getUsers(): Promise<void> {
-    this._usersService.getUsers().subscribe(
-      (data) => {
-        this.users = data;
-        console.log(data);
-        localStorage.setItem('users', JSON.stringify(this.users));
-      },
-      (error) => alert('error on load data')
-    );
-  }
-
-  viewDetail(id: number) {
-    this.router.navigate(['/user', id]);
-  }
-
-  // showItems(event) {
-  //   this.itemsPerPage = event.target.value;
-  // }
+ 
 }

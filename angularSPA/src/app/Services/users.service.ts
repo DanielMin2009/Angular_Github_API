@@ -17,22 +17,4 @@ export class UsersService {
   public getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.baseUrl);
   }
-
-  // searchUser(term: string) {
-  //   let usersArr: User[] = [];
-  //   term = term.toLocaleLowerCase();
-
-  //   for (let user of this.users) {
-  //     let name = user.name.toLocaleLowerCase();
-  //     if (name.indexOf(term) >= 0) {
-  //       usersArr.push(user);
-  //     }
-  //   }
-  //   return usersArr;
-  // }
-
-  // public getProducts(): Observable<User[]> {
-  //   const USERS = require('https://api.github.com/users');
-  //   return of(USERS).pipe(tap((data) => console.log('service', data)));
-  // }
 }

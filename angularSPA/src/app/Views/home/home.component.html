@@ -2,9 +2,7 @@
 <hr class="mt5 pb25">
 <main class="container animated fadeIn fast no-gutters">
     <div class="card-columns">
-        <app-user-card [user]="user" *ngFor="let user of users" (selectedUser)="viewDetail($event)">
-        </app-user-card>
-        <!-- this selectedUser is the Output that comes from this Component and calls the Method viewUser. It pass the click event from app-user-card -->
+    
     </div>
 </main>
 

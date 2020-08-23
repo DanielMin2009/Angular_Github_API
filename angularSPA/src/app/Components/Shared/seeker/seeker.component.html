@@ -1,0 +1,19 @@
+
+<h1 class="mTop text-justify">Searching: <small>{{ term }}</small></h1>
+<hr class="mt5 pb25">
+
+<div class="row animated fadeIn fast" *ngIf="users.length == 0">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      There are no matching results with the term: {{ term }}
+    </div>
+  </div>
+</div>
+
+<main class="container animated fadeIn fast no-gutters">
+    <div class="card-columns">
+        <app-user-card [user]="user" *ngFor="let user of users" (selectedUser)="viewDetail($event)">
+        </app-user-card>
+    </div>
+</main>
+
