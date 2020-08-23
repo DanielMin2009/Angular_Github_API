@@ -15,13 +15,15 @@ export class SeekerComponent implements OnInit {
   public user: User;
   term: string;
 
-
+  public totalUsers: number;
+  public page: number = 1;
+  public itemsPerPage: number = 10;
 
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private _usersService: UsersService
-    ) { }
+    ) {}
 
   ngOnInit(): void {
     this.getUsers();
@@ -56,6 +58,9 @@ export class SeekerComponent implements OnInit {
 
   viewDetail(id: number) {
     this.router.navigate(['/user', id]);
+  }
+  showItems(event) {
+    this.itemsPerPage = event.target.value;
   }
 
 }

@@ -1,4 +1,3 @@
-
 <h1 class="mTop text-justify">Searching: <small>{{ term }}</small></h1>
 <hr class="mt5 pb25">
 
@@ -11,9 +10,25 @@
 </div>
 
 <main class="container animated fadeIn fast no-gutters">
-    <div class="card-columns">
-        <app-user-card [user]="user" *ngFor="let user of users" (selectedUser)="viewDetail($event)">
-        </app-user-card>
+  <div class="card-columns">
+    <app-user-card [user]="user"
+      *ngFor="let user of users | paginate: { id: 'listing-pagination', itemsPerPage: itemsPerPage, currentPage: page, totalItems: totalUsers } let i = index"
+      (selectedUser)="viewDetail($event)">
+    </app-user-card>
+  </div>
+  <div class="bg-white pagination-box paginationGrid">
+    <div>
+      <span>Items per page</span>
+      <select (change)="showItems($event)" class="form-control">
+        <option value="10">10</option>
+        <option value="5">5</option>
+        <option value="20">20</option>
+      </select>
     </div>
-</main>
 
+
+    <pagination-controls id="listing-pagination" class="pagination justify-content-end" maxSize="10"
+      directionLinks="true" (pageChange)="page=$event">
+    </pagination-controls>
+  </div>
+</main>

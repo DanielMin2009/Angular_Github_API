@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 // Services
@@ -18,7 +19,7 @@ import { SeekerComponent } from './Components/Shared/seeker/seeker.component';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, HomeComponent, DetailComponent, UserCardComponent, SeekerComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule, NgxPaginationModule],
   providers: [UsersService],
   bootstrap: [AppComponent],
 })
