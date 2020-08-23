@@ -1,4 +1,4 @@
-<h1 class="mTop text-justify">Searching: <small>{{ term }}</small></h1>
+<h1 class="mTop text-justify">GitHub API users search</h1>
 <hr class="mt5 pb25">
 
 <div class="row animated fadeIn fast" *ngIf="users.length == 0">
@@ -20,13 +20,11 @@
     <div>
       <span>Items per page</span>
       <select (change)="showItems($event)" class="form-control">
-        <option value="10">10</option>
-        <option value="5">5</option>
-        <option value="20">20</option>
+        <option value="9">9</option>
+        <option value="6">6</option>
+        <option value="18">18</option>
       </select>
     </div>
-
-
     <pagination-controls id="listing-pagination" class="pagination justify-content-end" maxSize="10"
       directionLinks="true" (pageChange)="page=$event">
     </pagination-controls>

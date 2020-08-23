@@ -52,6 +52,10 @@ p {
         letter-spacing: 0.05rem;
     }
 }
+.emphasis {
+    color: $turquoise;
+    font-weight: 500;
+}
 @mixin commonButton {
     color: $dark;
     border: 1px solid $dark;

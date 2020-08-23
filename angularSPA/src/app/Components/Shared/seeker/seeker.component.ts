@@ -17,7 +17,7 @@ export class SeekerComponent implements OnInit {
 
   public totalUsers: number;
   public page: number = 1;
-  public itemsPerPage: number = 10;
+  public itemsPerPage: number = 9;
 
   constructor(
     private router: Router,

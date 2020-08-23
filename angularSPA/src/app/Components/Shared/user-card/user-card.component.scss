@@ -2,16 +2,22 @@
 
 .card {
     @include commonText;
-    border-radius: $border-radius;
+    border-radius: $border-radius-sm;
     background-color: $ecru;
     border: 1px solid rgba($dark, 18%);
     background-color: lighten($color: rgba($ecru, 80%), $amount: 3%);
     padding: 1rem;
+    .card-body {
+        padding: .86rem;
+        figure {
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
 }
 
-.card-body {
-    padding: 1rem;
-}
+
 
 .card-title {
     color: $dark;

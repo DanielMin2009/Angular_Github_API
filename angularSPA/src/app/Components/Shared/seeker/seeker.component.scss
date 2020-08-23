@@ -30,10 +30,10 @@
         }
     }
     @media (max-width: 992px) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 2fr;
     }
     @media (min-width: 992px) {
-        grid-template-columns: 65% auto;
+        grid-template-columns: 60% auto;
     }
 }
 .page-link {
