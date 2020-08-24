@@ -5,11 +5,11 @@
     border-radius: $border-radius-sm;
     background-color: $ecru;
     border: 1px solid rgba($ecru, 18%);
-    background-color: rgba($color: $ecru, $alpha: 0.2);
+    background-color: lighten($color: rgba($color: $ecru, $alpha: 0.8), $amount: 3%);
     padding: 1rem;
 
     &.list-group-item {
-        border: 1px solid rgba($color: $ecru, $alpha: 0.2);
+        border: 1px solid lighten($color: rgba($color: $ecru, $alpha: 0.8), $amount: 3%);
     }
 
     @media (max-width: 992px) {
@@ -29,6 +29,6 @@
     }
 }
 img {
-    border: 1px solid rgba($color: $ecru, $alpha: 0.2);
+    border: 1px solid lighten($color: rgba($color: $ecru, $alpha: 0.8), $amount: 3%);
     border-radius: 50%;
 }

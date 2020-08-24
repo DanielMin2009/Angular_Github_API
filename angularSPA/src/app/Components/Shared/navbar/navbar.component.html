@@ -4,7 +4,7 @@
             <div class="col-12">
 
                 <nav class="navbar navbar-expand-lg">
-                    <a routerLinkActive="menu-active" [routerLink]="['gnomes-list']" class="navbar-brand">
+                    <a routerLinkActive="menu-active" [routerLink]="['home']" class="navbar-brand">
                         <img src="./assets/img/logos/github-logo.svg" class="d-inline-block align-middle img-fluid" width="100%"
                             height="auto" alt="gnomes">
                     </a>
@@ -17,17 +17,12 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbar">
-                        <ul class="navbar-nav">
-
-                            
-                            <li class="nav-item mr-auto">
-                                <a class="nav-link" [routerLink]="['home']">Home</a>
-                            </li>
+                        <nav class="navbar-nav">
                             <form class="form-inline searchGrid ml-lg-auto">
                                 <input type="search" placeholder="write a username" aria-label="Search" (keyup)="searchUsers(loginName.value)" #loginName>
                                 <button (click)="searchUsers(loginName.value)" class="btn" type="button">Search</button>
                             </form>
-                        </ul>
+                        </nav>
                     </div>
                 </nav>
             </div>
