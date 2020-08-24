@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.0.
 
-## Creating projecte structure
+## Creating project structure
 
 ### I create the following folders: 
 
