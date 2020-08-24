@@ -15,10 +15,11 @@ import { HomeComponent } from './Views/home/home.component';
 import { DetailComponent } from './Views/detail/detail.component';
 import { UserCardComponent } from './Components/Shared/user-card/user-card.component';
 import { SeekerComponent } from './Components/Shared/seeker/seeker.component';
+import { NotFoundComponent } from './Views/not-found/not-found.component';
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, DetailComponent, UserCardComponent, SeekerComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, DetailComponent, UserCardComponent, SeekerComponent, NotFoundComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule, NgxPaginationModule],
   providers: [UsersService],
   bootstrap: [AppComponent],

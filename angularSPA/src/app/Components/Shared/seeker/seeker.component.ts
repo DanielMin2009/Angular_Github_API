@@ -12,6 +12,8 @@ import { ActivatedRoute } from '@angular/router'
 export class SeekerComponent implements OnInit {
 
   public users: User[] = [];
+  login: string;
+  
   public user: User;
   term: string;
 
@@ -27,6 +29,7 @@ export class SeekerComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUsers();
+    
     this.activatedRoute.params.subscribe(params => {
       console.log(params['term']);
       this.users = this.searchUsers(params['term']);

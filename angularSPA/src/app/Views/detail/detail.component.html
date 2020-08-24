@@ -1,3 +1,4 @@
+
 <h1 class="animated fadeIn fast mTop">{{ user.login | uppercase }}</h1>
 <hr>
 <nav aria-label="breadcrumb">
@@ -8,25 +9,24 @@
 </nav>
 <main class="animated fadeIn fast no-gutters">
     <div class="row">
-        <figure class="col col-lg-4">
+        <figure class="col-12 col-lg-4">
             <img [src]="user.avatar_url" [alt]="user.login" class="img-thumb" width="100%">
         </figure>
-        <article class="col col-lg-8">
+        <article class="col-12 col-lg-8">
             <ul class="list-group list-group-flush card">
-                <li class="list-group-item"><span class="emphasis">Url:</span> {{ user.url }}</li>
-                <li class="list-group-item"><span class="emphasis">Html url:</span> {{ user.html_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Followers url:</span> {{ user.followers_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Followers_url:</span> {{ user.followers_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Following_url:</span> {{ user.following_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Gists_url:</span> {{ user.gists_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Starred_url:</span> {{ user.starred_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Subscriptions_url:</span> {{ user.subscriptions_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Organizations_url:</span> {{ user.organizations_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Repos_url:</span> {{ user.repos_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Events_url:</span> {{ user.events_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Received_events_url:</span> {{ user.received_events_url }}</li>
-                <li class="list-group-item"><span class="emphasis">Type:</span> {{ user.type }}</li>
-                <li class="list-group-item"><span class="emphasis">Site_admin:</span> {{ user.site_admin }}</li>
+                <li class="list-group-item"><span class="emphasis">Url</span><br> <a href="{{ user.url }}" target="_blank">{{ user.url }}</a></li>
+                <li class="list-group-item"><span class="emphasis">User HTML</span><br> {{ user.html_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Followers</span><br> {{ user.followers_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Following</span><br> {{ user.following_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Gists</span><br> {{ user.gists_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Starred</span><br> {{ user.starred_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Subscriptions</span><br> {{ user.subscriptions_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Organizations</span><br> {{ user.organizations_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Repos</span><br> {{ user.repos_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Events</span><br> {{ user.events_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Received events</span><br> {{ user.received_events_url }}</li>
+                <li class="list-group-item"><span class="emphasis">Type</span><br> {{ user.type }}</li>
+                <li class="list-group-item"><span class="emphasis">Site admin</span><br> {{ user.site_admin }}</li>
             </ul>
         </article>
     </div>
